@@ -1,368 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-/*font-family: 'Poppins' sans-serif;
-*/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-}
-
- body {
-    font-family: 'permanent Marker', cursive;
-    background: linear-gradient(   
-        90deg,
-      rgba(83, 14 , 115, 1) 0%,
-      rgba(105, 13 , 150, 1)  510%,
-      rgba(80, 13 , 113, 1) 100%
-     
-    );
- }
-
- .container { 
-    max-width: 1200px;
-    margin:  0 auto;
-    
- }
-
- .header {
-    display: flex;
-    min-height: 75vh;
-    align-items: center;
- }
-
- .menu {
-    position:absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
- }
-
- .menu .logo {
-     color: #fece00;
-     font-size: 22px;
-     font-weight:800;
-     text-transform:uppercase;
-     
-     }
-
-     .menu .navbar ul li  {
-      position: relative;
-      float: left;
-
-     }
-
-     .menu .navbar ul li a {
-        font-size: 18px;
-        padding: 20px;
-        color: #fff4ff;
-        display: block;
-
-     }
-
-     .menu .navbar ul li a:hover {
-        color: #fece00;
-
-     }
-     #menu {
-        display: nome;
-     }
-     .menu-icono {
-        width: 25px;
-     }
-
-     .menu label {
-        cursor: pointer;
-        display: none;
-
-     }
-
-     .header-content {
-        display: flex;
-        align-items: center;
-
-     }
-
-     .header-txt {
-        width: 50%;
-     }
-
-     .header-txt h1 {
-        font-size: 80px;
-        line-height: 90;
-        letter-spacing: 5px;
-        font-family: 'Poppins' sans-serif;
-        color: #fece00;
-        text-transform: uppercase;
-        margin-bottom: 25px;
-
-     }
-
-  .header-txt span{
-    font-size: 40px;
-    color: #fff4ff;
-    font-family: 'permanent Marker', cursive;
-  }
-
-  p{
-    font-size: 16px;
-    color: #c9c5ca;
-    margin-bottom: 35px;
-  }
-
-  .btn-1 {
-    display: inline-block;
-    color: #420900;
-    padding: 13px 30px;
-    background-color:#c9c5ca;
-    border-radius: 25px;
-    text-transform: uppercase;
-    font-weight: 600;
-  
-  }
-
-  .btn-1:hover {
-    background-color: #fece00;
-  }
-  .header-ing {
-    width: 30%;
-  }
-
-  .header-ing img {
-   width: 70px;
-  }
-
-  .services {
-     display: flex;
-     justify-content: space-between;
-     padding: 0 0 50px 0;
-    
-  }
-
-  .services-1 {
-  text-align: center;
-  padding: 35px;
-  margin: 0 10px;
-  }
-
-  .services-1 img {
-    width: 35px;
-    margin-bottom: 15px;
-  }
-
-  .services-1 h3 {
-    font-size: 20px;
-    font-family: 'permanent Marker', cursive;
-    color: #fece00;
-    margin-bottom: 15px;
-  }
-
-  .info {
-    padding: 50px 0;
-    display: flex;
-  }
-
-  .info-1 {
-    width: 50%;
-  }
-   .info-1 img {
-    width: 450px;
-
-   }
-
-   .info-2 {
-    width: 50%;
-   }
-
-    he {
-        font-size: 30px;
-        letter-spacing: 5px;
-        font-family: 'permanent Marker', cursive;
-        color: #fece00;
-    }
-
-.pizza {
-    padding:  0 0  10px 0;
-    text-align: center;
-}
-
+/* Contenedor de las pizzas: Usamos flexbox para alinearlas en fila */
 .pizza-content {
-    margin-top: 55px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-
+  display: flex;
+  flex-wrap: wrap; /* Permite que las imágenes pasen a otra fila si no caben */
+  justify-content: space-evenly; /* Espacio uniforme entre elementos */
+  align-items: center; /* Alineación vertical */
+  gap: 10px; /* Espacio pequeño entre elementos */
+  padding: 20px 0; /* Espaciado arriba y abajo */
 }
 
-.pizza-1 {
-    padding: 35px;
-    text-align: center;
+/* Estilos para cada pizza */
+.pizza-item {
+  text-align: center;
+  width: 220px; /* Ajusta el ancho según necesidad */
+  flex-grow: 1; /* Permite que se ajusten mejor */
 }
 
-.pizza-1 img {
-    width: 250px;
-
+/* Asegurar que las imágenes no sean más grandes de lo necesario */
+.pizza-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centra la imagen */
 }
 
-.pizza-1 h3 {
-    font-size:  22px;
-    color: #fff4ff;
-    margin-bottom:  15px;
+/* Ajuste del contenedor principal para que no sea demasiado ancho */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
-
-.btn-2 {
-    display: inline-block;
-    color: #420900;
-    padding: 10px 20px;
-    background-color:#fece00;
-    border-radius: 25px;
-    text-transform: uppercase;
-    font-weight: 67;
-
-}
-
-.btn-2:hover {
-    background-color: #fff4ff;
-}
-
-.footer {
-    padding: 50px 0;
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #fff4ff52;
-}
-
-.lik h3 {
-    color: #fff4ff;
-    font-size: 18px;
-    margin-bottom: 15px;
-}
- .lik a {
-    display: block;
-    font-size: 16px;
-    color: #c9c5ca;
-    margin-bottom: 10px;
- }
-
- .lik a:hover {
-    color: #ffcd31;
-
- }
-
- @media(max-width:991px) {
-    .menu{
-        padding: 20px;
-
-    }
-
-    .menu label {
-        display: initial;
-    }
-
-    .menu .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #fece00;
-    display: nome;
-
-      }
-      .menu .navbar ul li {
-        width: 100;
-
-      }
-      .menu .navbar ul li a{
-        color: #400E00;
-      }
-      .menu .navbar ul li a:hover {
-        color: #515151;
-      }
-
-      #menu:checked ~.navbar {
-        display: initial;
-      }
-
-      .header-content{
-        flex-direction:  column;
-        padding: 100px 30px 0 30px;
-      }
-
-
-      .header-txt{
-        width: 100px;
-        text-align: center;
-        margin-bottom: 35px;
-
-      }
-
-      .header-txt h1{
-        font-size: 50px;
-        line-height: 60px;
-      }
-
-      .header-img {
-        width: 100%;
-        text-align: center;
-      }
-
-      .header-img img {
-        width: 300px;
-
-      }
-
-      .services {
-        flex-direction: column;
-        padding:  0 30px;
-
-      }
-
-      h2 {
-         font-size: 40px;
-      }
-
-      .info {
-        font-family: column;
-        padding:  0 39px;
-      }
-
-      .info-1 {
-        text-align: center;
-        width: 100%;
-        order: 2;
-      }
-
-      .info-1 img {
-        width: 250px;
-
-      }
-      .info-2 {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 25px;
-      }
-
-      .pezza {
-        padding: 30px;
-
-      }
-
-      .pizza-content {
-        margin-top: 15px;
-      grid-template-columns: repeat(1, 1fr);
-      }
-
-      .footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px;
-      }
- }
+<section class="pizza container">
+    <h2>Menú</h2>
+    <div class="pizza-content">
+        <div class="pizza-item">
+            <img src="images/piz1.png" alt="Pizza Margarita">
+            <h3>Pizza Margarita</h3>
+            <p>Deliciosa pizza con tomate y albahaca.</p>
+            <a href="#" class="btn-2">Información</a>
+        </div>
+        <div class="pizza-item">
+            <img src="images/piz3.png" alt="Pizza Pepperoni">
+            <h3>Pizza Pepperoni</h3>
+            <p>Queso derretido y pepperoni crujiente.</p>
+            <a href="#" class="btn-1">Información</a>
+        </div>
+        <div class="pizza-item">
+            <img src="images/piz2.png" alt="Pizza Cuatro Quesos">
+            <h3>Pizza Cuatro Quesos</h3>
+            <p>Cuatro tipos de queso derretido.</p>
+            <a href="#" class="btn-3">Información</a>
+        </div>
+    </div>
+</section>
